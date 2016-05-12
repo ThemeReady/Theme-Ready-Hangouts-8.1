@@ -1,0 +1,408 @@
+.class public final Ljuw;
+.super Lmha;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lmha",
+        "<",
+        "Ljuw;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static volatile c:[Ljuw;
+
+
+# instance fields
+.field public a:[Ljuv;
+
+.field public b:Ljuz;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 31
+    invoke-direct {p0}, Lmha;-><init>()V
+
+    .line 32
+    invoke-static {}, Ljuv;->d()[Ljuv;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljuw;->a:[Ljuv;
+
+    .line 33
+    iput-object v1, p0, Ljuw;->b:Ljuz;
+
+    .line 34
+    iput-object v1, p0, Ljuw;->eD:Lmhc;
+
+    .line 35
+    const/4 v0, -0x1
+
+    iput v0, p0, Ljuw;->eE:I
+
+    .line 36
+    return-void
+.end method
+
+.method private b(Lmgx;)Ljuw;
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 79
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lmgx;->a()I
+
+    move-result v0
+
+    .line 80
+    sparse-switch v0, :sswitch_data_0
+
+    .line 84
+    invoke-super {p0, p1, v0}, Lmha;->a(Lmgx;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 85
+    :sswitch_0
+    return-object p0
+
+    .line 90
+    :sswitch_1
+    const/16 v0, 0xa
+
+    .line 91
+    invoke-static {p1, v0}, Lmho;->b(Lmgx;I)I
+
+    move-result v2
+
+    .line 92
+    iget-object v0, p0, Ljuw;->a:[Ljuv;
+
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    .line 93
+    :goto_1
+    add-int/2addr v2, v0
+
+    new-array v2, v2, [Ljuv;
+
+    .line 95
+    if-eqz v0, :cond_1
+
+    .line 96
+    iget-object v3, p0, Ljuw;->a:[Ljuv;
+
+    invoke-static {v3, v1, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 98
+    :cond_1
+    :goto_2
+    array-length v3, v2
+
+    add-int/lit8 v3, v3, -0x1
+
+    if-ge v0, v3, :cond_3
+
+    .line 99
+    new-instance v3, Ljuv;
+
+    invoke-direct {v3}, Ljuv;-><init>()V
+
+    aput-object v3, v2, v0
+
+    .line 100
+    aget-object v3, v2, v0
+
+    invoke-virtual {p1, v3}, Lmgx;->a(Lmhh;)V
+
+    .line 101
+    invoke-virtual {p1}, Lmgx;->a()I
+
+    .line 98
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    .line 92
+    :cond_2
+    iget-object v0, p0, Ljuw;->a:[Ljuv;
+
+    array-length v0, v0
+
+    goto :goto_1
+
+    .line 104
+    :cond_3
+    new-instance v3, Ljuv;
+
+    invoke-direct {v3}, Ljuv;-><init>()V
+
+    aput-object v3, v2, v0
+
+    .line 105
+    aget-object v0, v2, v0
+
+    invoke-virtual {p1, v0}, Lmgx;->a(Lmhh;)V
+
+    .line 106
+    iput-object v2, p0, Ljuw;->a:[Ljuv;
+
+    goto :goto_0
+
+    .line 110
+    :sswitch_2
+    iget-object v0, p0, Ljuw;->b:Ljuz;
+
+    if-nez v0, :cond_4
+
+    .line 111
+    new-instance v0, Ljuz;
+
+    invoke-direct {v0}, Ljuz;-><init>()V
+
+    iput-object v0, p0, Ljuw;->b:Ljuz;
+
+    .line 113
+    :cond_4
+    iget-object v0, p0, Ljuw;->b:Ljuz;
+
+    invoke-virtual {p1, v0}, Lmgx;->a(Lmhh;)V
+
+    goto :goto_0
+
+    .line 80
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_0
+        0xa -> :sswitch_1
+        0x12 -> :sswitch_2
+    .end sparse-switch
+.end method
+
+.method public static d()[Ljuw;
+    .locals 2
+
+    .prologue
+    .line 12
+    sget-object v0, Ljuw;->c:[Ljuw;
+
+    if-nez v0, :cond_1
+
+    .line 13
+    sget-object v1, Lmhe;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 15
+    :try_start_0
+    sget-object v0, Ljuw;->c:[Ljuw;
+
+    if-nez v0, :cond_0
+
+    .line 16
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljuw;
+
+    sput-object v0, Ljuw;->c:[Ljuw;
+
+    .line 18
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 20
+    :cond_1
+    sget-object v0, Ljuw;->c:[Ljuw;
+
+    return-object v0
+
+    .line 18
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public synthetic a(Lmgx;)Lmhh;
+    .locals 1
+
+    .prologue
+    .line 5
+    invoke-direct {p0, p1}, Ljuw;->b(Lmgx;)Ljuw;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Lmgy;)V
+    .locals 3
+
+    .prologue
+    .line 41
+    iget-object v0, p0, Ljuw;->a:[Ljuv;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Ljuw;->a:[Ljuv;
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    .line 42
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Ljuw;->a:[Ljuv;
+
+    array-length v1, v1
+
+    if-ge v0, v1, :cond_1
+
+    .line 43
+    iget-object v1, p0, Ljuw;->a:[Ljuv;
+
+    aget-object v1, v1, v0
+
+    .line 44
+    if-eqz v1, :cond_0
+
+    .line 45
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Lmgy;->b(ILmhh;)V
+
+    .line 42
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 49
+    :cond_1
+    iget-object v0, p0, Ljuw;->b:Ljuz;
+
+    if-eqz v0, :cond_2
+
+    .line 50
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Ljuw;->b:Ljuz;
+
+    invoke-virtual {p1, v0, v1}, Lmgy;->b(ILmhh;)V
+
+    .line 52
+    :cond_2
+    invoke-super {p0, p1}, Lmha;->a(Lmgy;)V
+
+    .line 53
+    return-void
+.end method
+
+.method protected b()I
+    .locals 4
+
+    .prologue
+    .line 57
+    invoke-super {p0}, Lmha;->b()I
+
+    move-result v1
+
+    .line 58
+    iget-object v0, p0, Ljuw;->a:[Ljuv;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Ljuw;->a:[Ljuv;
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    .line 59
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v2, p0, Ljuw;->a:[Ljuv;
+
+    array-length v2, v2
+
+    if-ge v0, v2, :cond_1
+
+    .line 60
+    iget-object v2, p0, Ljuw;->a:[Ljuv;
+
+    aget-object v2, v2, v0
+
+    .line 61
+    if-eqz v2, :cond_0
+
+    .line 62
+    const/4 v3, 0x1
+
+    .line 63
+    invoke-static {v3, v2}, Lmgy;->d(ILmhh;)I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    .line 59
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 67
+    :cond_1
+    iget-object v0, p0, Ljuw;->b:Ljuz;
+
+    if-eqz v0, :cond_2
+
+    .line 68
+    const/4 v0, 0x2
+
+    iget-object v2, p0, Ljuw;->b:Ljuz;
+
+    .line 69
+    invoke-static {v0, v2}, Lmgy;->d(ILmhh;)I
+
+    move-result v0
+
+    add-int/2addr v1, v0
+
+    .line 71
+    :cond_2
+    return v1
+.end method
